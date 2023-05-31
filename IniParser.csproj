@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>6</LangVersion>
+  </PropertyGroup>
+  <Target Name="Build">
+    <Csc Sources="IniParser.cs" TargetType="library" />
+  </Target>
+  <Target Name="Test">
+    <Csc Sources="IniParserTest.cs" />
+  </Target>
+  <ItemGroup>
+    <Compile Include="IniParser.cs" />
+    <Compile Include="IniParserTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.mk" />
+    <Content Include="example.ini" />
+    <Content Include="Makefile" />
+  </ItemGroup>
+</Project>
